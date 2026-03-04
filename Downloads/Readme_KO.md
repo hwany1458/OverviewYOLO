@@ -1,10 +1,22 @@
+# YOLOv1–v12: 논문 링크, 공식적인 코드 및 키 노트 (한글)
+
+> 본 문서는 ...
+
+---
+
+## YOLOv1
+
 Joseph Redmon이 발표한 <span style="color:#0000FF"><strong>YOLOv1</strong></span> 논문은 실시간 객체 탐지 분야의 패러다임을 바꾼 중요한
 연구입니다.
-<strong>1. YOLOv1 논문 다운로드 (arXiv)</strong>
-<strong>제목: </strong>You Only Look Once: Unified, Real-Time Object Detection
-<strong>저자: </strong>Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi
-<strong>다운로드 링크: </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1506.02640](https://arxiv.org/abs/1506.02640)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
+
+### 1. YOLOv1 논문 다운로드 (arXiv)
+
+- <strong>제목: </strong>You Only Look Once: Unified, Real-Time Object Detection
+- <strong>저자: </strong>Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi
+- <strong>다운로드 링크: </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1506.02640](https://arxiv.org/abs/1506.02640)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
 <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
 YOLO의 창시자인 Joseph Redmon이 직접 관리하던 원본 프레임워크인 <strong>Darknet</strong>의 소스코드입니다.
 <strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
