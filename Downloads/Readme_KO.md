@@ -366,7 +366,7 @@ Boxes), 분류에 최적화된 설계를 공유합니다.
 
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
-- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/sanyuan-ai/YOLOv12](https://github.com/sanyuan-ai/YOLOv12)</span>
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/sunsmarterjie/yolov12](https://github.com/sunsmarterjie/yolov12)</span>
 - <strong>관련 가중치(Weights): </strong>저장소의 Release 섹션에서 YOLOv12-N(Nano)부터 YOLOv12-X(Extra
 Large)까지의 사전 학습된 모델을 제공합니다.
 

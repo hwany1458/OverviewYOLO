@@ -329,7 +329,7 @@ The latest model, <span style="color:#0B57D0"><strong>YOLOv12</strong></span>, w
 
 ### 2. Official Source Code and Project Page
 
-- **Official GitHub repository:** https://github.com/sanyuan-ai/YOLOv12  
+- **Official GitHub repository:** https://github.com/sunsmarterjie/yolov12  
 - **Related weights:** From the repository’s Release section, pre-trained models from YOLOv12-N (Nano) to YOLOv12-X (Extra Large) are provided.
 
 ### 3. Key Innovations of <span style="color:#0B57D0"><strong>YOLOv12</strong></span>
