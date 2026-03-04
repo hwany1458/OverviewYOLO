@@ -18,7 +18,7 @@ Joseph Redmon이 발표한 <span style="color:#0000FF"><strong>YOLOv1</strong></
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
 - <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
-YOLO의 창시자인 Joseph Redmon이 직접 관리하던 원본 프레임워크인 <strong>Darknet</strong>의 소스코드입니다.
+<br>YOLO의 창시자인 Joseph Redmon이 직접 관리하던 원본 프레임워크인 <strong>Darknet</strong>의 소스코드입니다.
 - <strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
 YOLOv1부터 v3까지의 가중치(weights) 파일과 설정법을 확인할 수 있는 Joseph Redmon의 공식 홈페이지입니다.
 
