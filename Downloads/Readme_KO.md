@@ -112,7 +112,7 @@ Redmon이 떠난 후 커뮤니티에 의해 공식적으로 계승된 첫 번째
 - <strong>공식 Darknet 저장소 (C언어/CUDA 기반): </strong><span style="color:#0B57D0">[https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)</span>
 Joseph Redmon의 Darknet을 이어받아 AlexeyAB가 유지보수하는 공식 버전입니다. YOLOv4의 모든
 실험 결과가 이 코드를 기반으로 합니다.
-- <strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">yolov4.weights (245MB)</span>
+- <strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">`yolov4.weights` (245MB)</span>
 - <strong>PyTorch 구현체: </strong><span style="color:#0B57D0">[https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)</span>
 Darknet 가중치를 PyTorch로 변환하여 사용할 수 있는 대중적인 저장소입니다.
 <strong>3. YOLOv4의 핵심 기술 </strong>
