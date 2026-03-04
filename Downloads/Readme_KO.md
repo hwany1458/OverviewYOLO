@@ -115,109 +115,151 @@ Joseph Redmon의 Darknet을 이어받아 AlexeyAB가 유지보수하는 공식 �
 - <strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">`yolov4.weights` (245MB)</span>
 - <strong>PyTorch 구현체: </strong><span style="color:#0B57D0">[https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)</span>
 Darknet 가중치를 PyTorch로 변환하여 사용할 수 있는 대중적인 저장소입니다.
-<strong>3. YOLOv4의 핵심 기술 </strong>
-<strong>Architecture: </strong>CSPDarknet53(Backbone), SPP(Neck), PANet(Path Aggregation), YOLOv3-Head
+
+### 3. YOLOv4의 핵심 기술 
+
+- <strong>Architecture: </strong>CSPDarknet53(Backbone), SPP(Neck), PANet(Path Aggregation), YOLOv3-Head
 구성.
-<strong>Bag of Freebies (BoF): </strong>Mosaic 데이터 증강, DropBlock 규제화, CIoU Loss, Cross-mini-Batch
+- <strong>Bag of Freebies (BoF): </strong>Mosaic 데이터 증강, DropBlock 규제화, CIoU Loss, Cross-mini-Batch
 Normalization(CmBN).
-<strong>Bag of Specials (BoS): </strong>Mish 활성화 함수, SAM(Spatial Attention Module), DIoU-NMS.
+- <strong>Bag of Specials (BoS): </strong>Mish 활성화 함수, SAM(Spatial Attention Module), DIoU-NMS.
+
 특히 <strong>CSPNet </strong>구조가 YOLOv4에 도입되면서 성능 향상의 핵심이 되었습니다.
+
+---
+
+## YOLOv5
+
 <span style="color:#0000FF"><strong>YOLOv5</strong></span>는 2020년 Glenn Jocher(Ultralytics)에 의해 공개되었으며, 학술적 논문 형식의 아카이브(arXiv)
 문서보다는 GitHub 저장소와 기술 문서(Documentation)를 중심으로 발전하였습니다. 뛰어난 사용
 편의성과 파이토치(PyTorch) 기반의 유연한 구조 덕분에 현재까지도 산업계에서 가장 널리 쓰이는 모델
 중 하나입니다.
-<strong>1. YOLOv5 논문 및 기술 문서 링크</strong>
+
+### 1. YOLOv5 논문 및 기술 문서 링크
 YOLOv5는 정식 출판된 학술 논문 대신, Ultralytics 팀이 작성한 공식 문서와 분석 자료가 그 역할을
 대신합니다.
-<strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolov5/](https://docs.ultralytics.com/models/yolov5/)</span>
-<strong>공식 릴리스 노트 (v7.0 포함): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov5/releases](https://github.com/ultralytics/yolov5/releases)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)</span>
-최신 버전인 v7.0(Instance Segmentation 지원)까지 포함되어 있으며, pip install yolov5를 통해 바로
+- <strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolov5/](https://docs.ultralytics.com/models/yolov5/)</span>
+- <strong>공식 릴리스 노트 (v7.0 포함): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov5/releases](https://github.com/ultralytics/yolov5/releases)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)</span>
+<br>최신 버전인 v7.0(Instance Segmentation 지원)까지 포함되어 있으며, pip install yolov5를 통해 바로
 설치가 가능합니다.
-<strong>Pre-trained 가중치: </strong>저장소 내의 <span style="color:#0B57D0">Release Asset </span>페이지에서 YOLOv5n(Nano)부터 YOLOv5x(Extra
+- <strong>Pre-trained 가중치: </strong>저장소 내의 <span style="color:#0B57D0">Release Asset </span>페이지에서 YOLOv5n(Nano)부터 YOLOv5x(Extra
 Large)까지 모든 모델 파일을 받을 수 있습니다.
-<strong>3. YOLOv5의 핵심 특징 </strong>
-<strong>PyTorch Native: </strong>기존 Darknet(C언어) 기반에서 완전히 벗어나 PyTorch로 구현되어 딥러닝 연구자들의
+
+### 3. YOLOv5의 핵심 특징
+- <strong>PyTorch Native: </strong>기존 Darknet(C언어) 기반에서 완전히 벗어나 PyTorch로 구현되어 딥러닝 연구자들의
 접근성을 극대화했습니다.
-<strong>C3 Module: </strong>Bottleneck CSP를 단순화한 <strong>C3(Cross Stage Partial bottleneck with 3 convolutions) </strong>
+- <strong>C3 Module: </strong>Bottleneck CSP를 단순화한 <strong>C3(Cross Stage Partial bottleneck with 3 convolutions) </strong>
 모듈을 도입하여 연산 효율성을 높였습니다.
-<strong>Auto-Learning Bounding Box Anchors: </strong>학습 데이터셋의 통계를 바탕으로 앵커 박스 크기를 자동으로
+- <strong>Auto-Learning Bounding Box Anchors: </strong>학습 데이터셋의 통계를 바탕으로 앵커 박스 크기를 자동으로
 최적화하는 기능을 제공합니다.
-<strong>Model Scaling: </strong>입력을 조절하여 Nano(n), Small(s), Medium(m), Large(l), Extra Large(x)의 5가지
+- <strong>Model Scaling: </strong>입력을 조절하여 Nano(n), Small(s), Medium(m), Large(l), Extra Large(x)의 5가지
 크기로 배포되어 하드웨어 환경에 맞는 선택이 가능합니다.
+
+---
+
+## YOLOv6
+
 <span style="color:#0000FF"><strong>YOLOv6</strong></span>는 2022년 중국의 배달 플랫폼 기업인 <strong>메이투안(Meituan)</strong>의 비전 팀에 의해 발표되었습니다. 이
 모델은 학술적 연구보다는 '<strong>산업 현장(Industrial Applications)</strong>'에서의 실제 추론 속도와 효율성을
 극대화하는 데 초점을 맞추어 설계되었습니다.
-<strong>1. YOLOv6 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications
-<strong>저자: </strong>Chuyi Li, Liunian Li, Hongliang Jiang, et al. (Meituan Vision Labs)
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2209.02976](https://arxiv.org/abs/2209.02976)</span>
-<strong>최신 버전 (v3.0) 기술 보고서: </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2301.05586](https://arxiv.org/abs/2301.05586)</span>
-(v3.0에서는 Bi-directional Concatenation 등 네트워크 구조가 대폭 개선되었습니다.)
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)</span>
+
+### >1. YOLOv6 논문 다운로드
+
+- <strong>제목: </strong>YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications
+- <strong>저자: </strong>Chuyi Li, Liunian Li, Hongliang Jiang, et al. (Meituan Vision Labs)
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2209.02976](https://arxiv.org/abs/2209.02976)</span>
+- <strong>최신 버전 (v3.0) 기술 보고서: </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2301.05586](https://arxiv.org/abs/2301.05586)</span>
+<br>(v3.0에서는 Bi-directional Concatenation 등 네트워크 구조가 대폭 개선되었습니다.)
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)</span>
 메이투안 팀에서 직접 관리하는 공식 레포지토리이며, PyTorch 기반으로 구현되어 있습니다.
-<strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv6-N(Nano)부터 YOLOv6-L(Large)까지의 최신
-v3.0 가중치를 다운로드할 수 있습니다.
-<strong>3. YOLOv6의 핵심 기술 </strong>
-<strong>RepVGG Backbone: </strong>추론 시에는 단일 경로(Single-path) 구조로 변환되어 속도를 높이고, 학습 시에는
+<strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv6-N(Nano)부터 YOLOv6-L(Large)까지의 최신 v3.0 가중치를 다운로드할 수 있습니다.
+
+### 3. YOLOv6의 핵심 기술 
+- <strong>RepVGG Backbone: </strong>추론 시에는 단일 경로(Single-path) 구조로 변환되어 속도를 높이고, 학습 시에는
 다중 경로로 학습하는 <strong>Re-parameterization</strong>기법을 적극 도입했습니다.
-<strong>Decoupled Head: </strong>분류(Classification)와 회귀(Regression) 예측을 분리하여 처리함으로써 정확도를
+- <strong>Decoupled Head: </strong>분류(Classification)와 회귀(Regression) 예측을 분리하여 처리함으로써 정확도를
 높였습니다.
-<strong>Quantization Friendly: </strong>산업용 배포를 위해 하드웨어 가속 및 양자화(INT8)에 최적화된 설계를
+- <strong>Quantization Friendly: </strong>산업용 배포를 위해 하드웨어 가속 및 양자화(INT8)에 최적화된 설계를
 적용했습니다.
-<strong>SimOTA: </strong>YOLOX에서 제안된 동적 레이블 할당 전략을 최적화하여 학습 속도를 개선했습니다.
+- <strong>SimOTA: </strong>YOLOX에서 제안된 동적 레이블 할당 전략을 최적화하여 학습 속도를 개선했습니다.
+
+---
+
+## YOLOv7
+
 <span style="color:#0000FF"><strong>YOLOv7</strong></span>은 2022년 CVPR에서 발표되었으며, YOLOv4의 저자인 Chien-Yao Wang과 Alexey
 Bochkovskiy가 다시 합작하여 만든 모델입니다. "Trainable Bag-of-Freebies"라는 개념을 통해 학습
 효율을 극대화하고, 당시 현존하는 모든 실시간 객체 탐지기의 성능을 뛰어넘는 새로운
 SOTA(State-of-the-Art)를 기록했습니다.
-<strong>1. YOLOv7 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object
+
+### 1. YOLOv7 논문 다운로드
+
+- <strong>제목: </strong>YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object
 Detectors
-<strong>저자: </strong>Chien-Yao Wang, Alexey Bochkovskiy, Hong-Yuan Mark Liao
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2207.02696](https://arxiv.org/abs/2207.02696)</span>
-<strong>논문 링크 (CVPR Open Access): </strong>
-<span style="color:#0B57D0">[https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebi](https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebi)</span>
-<span style="color:#0B57D0">es_Sets_New_State-of-the-Art_for_Real-Time_Object_CVPR_2023_paper.html</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)</span>
+- <strong>저자: </strong>Chien-Yao Wang, Alexey Bochkovskiy, Hong-Yuan Mark Liao
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2207.02696](https://arxiv.org/abs/2207.02696)</span>
+- <strong>논문 링크 (CVPR Open Access): </strong>
+<span style="color:#0B57D0">[https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebies_Sets_New_State-of-the-Art_for_Real-Time_Object_CVPR_2023_paper.html](https://openaccess.thecvf.com/content/CVPR2023/html/Wang_YOLOv7_Trainable_Bag-of-Freebies_Sets_New_State-of-the-Art_for_Real-Time_Object_CVPR_2023_paper.html)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)</span>
 PyTorch 기반으로 구현되어 있으며, 연구 및 산업 현장에서 가장 신뢰받는 공식 코드입니다.
-<strong>공식 가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>페이지에서 YOLOv7-tiny부터 YOLOv7-E6E까지 모든
+- <strong>공식 가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>페이지에서 YOLOv7-tiny부터 YOLOv7-E6E까지 모든
 모델 파일을 받을 수 있습니다.
-<strong>3. YOLOv7의 핵심 혁신 </strong>
-<strong>E-ELAN (Extended Efficient Layer Aggregation Network): </strong>그라디언트 경로를 최적화하여 네트워크가
+
+### 3. YOLOv7의 핵심 혁신
+- <strong>E-ELAN (Extended Efficient Layer Aggregation Network): </strong>그라디언트 경로를 최적화하여 네트워크가
 더 효과적으로 학습할 수 있도록 설계된 아키텍처입니다.
-<strong>Model Scaling for Concatenation-based Models: </strong>단순히 깊이나 너비를 키우는 것이 아니라,
+- <strong>Model Scaling for Concatenation-based Models: </strong>단순히 깊이나 너비를 키우는 것이 아니라,
 파라미터와 연산량의 균형을 맞추며 모델 크기를 조절하는 새로운 스케일링 기법을 제안했습니다.
-<strong>Planned Re-parameterized Convolution: </strong>RepVGG와 같은 재매개변수화 기법을 최적화하여 추론
+- <strong>Planned Re-parameterized Convolution: </strong>RepVGG와 같은 재매개변수화 기법을 최적화하여 추론
 속도를 희생하지 않고 성능을 높였습니다.
-<strong>Coarse-to-Fine Lead Head Label Assignment: </strong>보조 헤드(Auxiliary head)와 리드 헤드(Lead head)를
+- <strong>Coarse-to-Fine Lead Head Label Assignment: </strong>보조 헤드(Auxiliary head)와 리드 헤드(Lead head)를
 활용한 새로운 레이블 할당 전략을 도입했습니다.
+
+---
+
+## YOLOv8
+
 <span style="color:#0000FF"><strong>YOLOv8</strong></span>은 2023년 <strong>Ultralytics(Glenn Jocher)</strong>에 의해 발표된 모델로, 이전 버전인 YOLOv5의 성공을
 바탕으로 설계되었습니다. YOLOv8은 특정 아키텍처에 국한되지 않고 객체 탐지(Detection),
 세그먼테이션(Segmentation), 자세 추정(Pose Estimation), 추적(Tracking), 분류(Classification)를 모두
 지원하는 <strong>통합 프레임워크</strong>로 진화했습니다.
-<strong>1. YOLOv8 논문 및 기술 문서 링크</strong>
+
+### 1. YOLOv8 논문 및 기술 문서 링크
 YOLOv5와 마찬가지로, YOLOv8 역시 정식 arXiv 논문보다는 공식 문서와 오픈소스 커뮤니티의 기술
 리포트를 중심으로 배포되었습니다.
-<strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolov8/](https://docs.ultralytics.com/models/yolov8/)</span>
-<strong>Ultralytics 공식 블로그 (핵심 요약): </strong><span style="color:#0B57D0">[https://www.ultralytics.com/blog/ultralytics-yolov8-is-here](https://www.ultralytics.com/blog/ultralytics-yolov8-is-here)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)</span>
-YOLOv8은 ultralytics라는 통합 패키지로 관리됩니다. pip install ultralytics 명령어로 쉽게 설치하여
+- <strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolov8/](https://docs.ultralytics.com/models/yolov8/)</span>
+- <strong>Ultralytics 공식 블로그 (핵심 요약): </strong><span style="color:#0B57D0">[https://www.ultralytics.com/blog/ultralytics-yolov8-is-here](https://www.ultralytics.com/blog/ultralytics-yolov8-is-here)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)</span>
+<br>YOLOv8은 ultralytics라는 통합 패키지로 관리됩니다. pip install ultralytics 명령어로 쉽게 설치하여
 사용할 수 있습니다.
-<strong>가중치(Weights) 및 모델 체크포인트: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/assets/releases](https://github.com/ultralytics/assets/releases)</span>
-YOLOv8n부터 YOLOv8x까지 다양한 크기의 가중치 파일을 제공합니다.
-<strong>3. YOLOv8의 핵심 기술적 혁신 </strong>
-<strong>Anchor-Free Detection: </strong>YOLOv5까지 유지되던 앵커 기반 방식을 버리고 <strong>앵커 프리(Anchor-Free) </strong>
+- <strong>가중치(Weights) 및 모델 체크포인트: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/assets/releases](https://github.com/ultralytics/assets/releases)</span>
+<br>YOLOv8n부터 YOLOv8x까지 다양한 크기의 가중치 파일을 제공합니다.
+
+### 3. YOLOv8의 핵심 기술적 혁신 
+
+- <strong>Anchor-Free Detection: </strong>YOLOv5까지 유지되던 앵커 기반 방식을 버리고 <strong>앵커 프리(Anchor-Free) </strong>
 방식을 도입하여 객체의 중심을 직접 예측함으로써 일반화 성능을 높였습니다.
-<strong>C2f Module: </strong>YOLOv5의 C3 모듈을 개선한 <strong>C2f (Cross-Stage Partial Bottleneck with 2 </strong>
-<strong>Convolutions) </strong>모듈을 사용하여 특징 추출 능력을 강화하면서도 경량성을 유지했습니다.
-<strong>Decoupled Head: </strong>분류와 회귀를 별도의 브랜치에서 처리하는 구조를 채택하여 수렴 속도와 정확도를
-향상시켰습니다.
-<strong>New Loss Functions: </strong>회귀 손실을 위해 <strong>CIoU</strong>와 <strong>DFL(Distribution Focal Loss)</strong>을 결합하여 경계 상자
-예측의 정밀도를 높였습니다.
+- <strong>C2f Module: </strong>YOLOv5의 C3 모듈을 개선한 <strong>C2f (Cross-Stage Partial Bottleneck with 2 Convolutions) </strong>모듈을 사용하여 특징 추출 능력을 강화하면서도 경량성을 유지했습니다.
+- <strong>Decoupled Head: </strong>분류와 회귀를 별도의 브랜치에서 처리하는 구조를 채택하여 수렴 속도와 정확도를 향상시켰습니다.
+- <strong>New Loss Functions: </strong>회귀 손실을 위해 <strong>CIoU</strong>와 <strong>DFL(Distribution Focal Loss)</strong>을 결합하여 경계 상자 예측의 정밀도를 높였습니다.
+
+---
+
+## YOLOv9
+
 <span style="color:#0000FF"><strong>YOLOv9</strong></span>은 2024년 2월 Chien-Yao Wang(YOLOv4, v7의 저자) 등에 의해 발표되었으며, 정보 손실
 문제를 해결하기 위해 <strong>PGI(Programmable Gradient Information)</strong>와 <strong>GELAN(Generalized ELAN) </strong>
 아카텍처를 도입하여 큰 주목을 받았습니다.
