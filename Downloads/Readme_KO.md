@@ -167,7 +167,7 @@ Large)까지 모든 모델 파일을 받을 수 있습니다.
 모델은 학술적 연구보다는 '<strong>산업 현장(Industrial Applications)</strong>'에서의 실제 추론 속도와 효율성을
 극대화하는 데 초점을 맞추어 설계되었습니다.
 
-### >1. YOLOv6 논문 다운로드
+### 1. YOLOv6 논문 다운로드
 
 - <strong>제목: </strong>YOLOv6: A Single-Stage Object Detection Framework for Industrial Applications
 - <strong>저자: </strong>Chuyi Li, Liunian Li, Hongliang Jiang, et al. (Meituan Vision Labs)
@@ -211,7 +211,7 @@ Detectors
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
 - <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)</span>
-PyTorch 기반으로 구현되어 있으며, 연구 및 산업 현장에서 가장 신뢰받는 공식 코드입니다.
+<br>PyTorch 기반으로 구현되어 있으며, 연구 및 산업 현장에서 가장 신뢰받는 공식 코드입니다.
 - <strong>공식 가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>페이지에서 YOLOv7-tiny부터 YOLOv7-E6E까지 모든
 모델 파일을 받을 수 있습니다.
 
@@ -263,70 +263,99 @@ YOLOv5와 마찬가지로, YOLOv8 역시 정식 arXiv 논문보다는 공식 문
 <span style="color:#0000FF"><strong>YOLOv9</strong></span>은 2024년 2월 Chien-Yao Wang(YOLOv4, v7의 저자) 등에 의해 발표되었으며, 정보 손실
 문제를 해결하기 위해 <strong>PGI(Programmable Gradient Information)</strong>와 <strong>GELAN(Generalized ELAN) </strong>
 아카텍처를 도입하여 큰 주목을 받았습니다.
-<strong>1. YOLOv9 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information
-<strong>저자: </strong>Chien-Yao Wang, I-Hau Yeh, Hong-Yuan Mark Liao
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2402.13616](https://arxiv.org/abs/2402.13616)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/WongKinYiu/yolov9](https://github.com/WongKinYiu/yolov9)</span>
-PyTorch 기반의 공식 구현체이며, 최신 연구 결과가 지속적으로 업데이트됩니다.
-<strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv9-S, M, C, E 모델별 학습된 가중치를
+
+### 1. YOLOv9 논문 다운로드
+
+- <strong>제목: </strong>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information
+- <strong>저자: </strong>Chien-Yao Wang, I-Hau Yeh, Hong-Yuan Mark Liao
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2402.13616](https://arxiv.org/abs/2402.13616)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/WongKinYiu/yolov9](https://github.com/WongKinYiu/yolov9)</span>
+<br>PyTorch 기반의 공식 구현체이며, 최신 연구 결과가 지속적으로 업데이트됩니다.
+- <strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv9-S, M, C, E 모델별 학습된 가중치를
 다운로드할 수 있습니다.
-<strong>3. YOLOv9의 핵심 혁신 </strong>
-<strong>Information Bottleneck 해결: </strong>딥러닝 네트워크가 깊어질수록 입력 데이터의 정보가 소실되는 문제를
+
+### 3. YOLOv9의 핵심 혁신 
+
+- <strong>Information Bottleneck 해결: </strong>딥러닝 네트워크가 깊어질수록 입력 데이터의 정보가 소실되는 문제를
 지적하고 이를 해결하기 위한 이론적 토대를 마련했습니다.
-<strong>PGI (Programmable Gradient Information): </strong>보조 가역 분기(Auxiliary Reversible Branch)를 통해
+- <strong>PGI (Programmable Gradient Information): </strong>보조 가역 분기(Auxiliary Reversible Branch)를 통해
 타겟 데이터에 도달하기 위한 완전한 정보를 유지하며, 이를 통해 메인 브랜치가 더 정확한 그라디언트를
 얻을 수 있도록 돕습니다.
-<strong>GELAN (Generalized Efficient Layer Aggregation Network): </strong>기존 ELAN을 일반화하여 연산 효율과
+- <strong>GELAN (Generalized Efficient Layer Aggregation Network): </strong>기존 ELAN을 일반화하여 연산 효율과
 정확도의 균형을 극대화한 새로운 아키텍처입니다.
-<strong>성능: </strong>YOLOv9은 이전 버전인 YOLOv8보다 파라미터 수는 적으면서도 더 높은 mAP를 기록하며
+- <strong>성능: </strong>YOLOv9은 이전 버전인 YOLOv8보다 파라미터 수는 적으면서도 더 높은 mAP를 기록하며
 효율성을 입증했습니다.
+
+---
+
+## YOLOv10
+
 <span style="color:#0000FF"><strong>YOLOv10</strong></span>은 2024년 5월 칭화 대학교(Tsinghua University) 연구팀에 의해 발표되었으며, YOLO
 시리즈의 고질적인 병목 현상이었던 <strong>NMS(Non-Maximum Suppression)</strong>를 제거하여 완전한 <strong>엔드 투 </strong>
 <strong>엔드(End-to-End) </strong>실시간 객체 탐지를 구현한 모델입니다.
-<strong>1. YOLOv10 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv10: Real-Time End-to-End Object Detection
-<strong>저자: </strong>Ao Wang, Hui Chen, Liwu Wei, Zhiqiang Bin, et al.
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2405.14458](https://arxiv.org/abs/2405.14458)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/THU-MIG/yolov10](https://github.com/THU-MIG/yolov10)</span>
-칭화대학교 멀티미디어 인텔리전스 그룹(MIG)에서 관리하는 공식 저장소입니다.
-<strong>Hugging Face 데모: </strong><span style="color:#0B57D0">[https://huggingface.co/spaces/jameslahm/yolov10](https://huggingface.co/spaces/jameslahm/yolov10)</span>
-웹상에서 직접 이미지를 업로드하여 YOLOv10의 성능을 테스트해 볼 수 있습니다.
-<strong>3. YOLOv10의 핵심 혁신 </strong>
-<strong>NMS-Free Training:</strong>중복된 예측 상자를 제거하는 NMS 과정은 추론 속도를 늦추는 원인이었습니다.
+
+### 1. YOLOv10 논문 다운로드
+
+- <strong>제목: </strong>YOLOv10: Real-Time End-to-End Object Detection
+- <strong>저자: </strong>Ao Wang, Hui Chen, Liwu Wei, Zhiqiang Bin, et al.
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2405.14458](https://arxiv.org/abs/2405.14458)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/THU-MIG/yolov10](https://github.com/THU-MIG/yolov10)</span>
+<br>칭화대학교 멀티미디어 인텔리전스 그룹(MIG)에서 관리하는 공식 저장소입니다.
+- <strong>Hugging Face 데모: </strong><span style="color:#0B57D0">[https://huggingface.co/spaces/jameslahm/yolov10](https://huggingface.co/spaces/jameslahm/yolov10)</span>
+<br>웹상에서 직접 이미지를 업로드하여 YOLOv10의 성능을 테스트해 볼 수 있습니다.
+
+### 3. YOLOv10의 핵심 혁신 
+
+- <strong>NMS-Free Training:</strong>중복된 예측 상자를 제거하는 NMS 과정은 추론 속도를 늦추는 원인이었습니다.
 YOLOv10은 <strong>Consistent Dual Assignment</strong>전략을 도입하여 NMS 없이도 정확한 결과를 도출하며 추론
 지연 시간을 대폭 줄였습니다.
-<strong>Holistic Model Design:</strong>연산 효율을 극대화하기 위해 효율적인 부분 셀프 어텐션(Partial Self-Attention,
+- <strong>Holistic Model Design:</strong>연산 효율을 극대화하기 위해 효율적인 부분 셀프 어텐션(Partial Self-Attention,
 PSA)과 공간-채널 분리 합성곱 등을 결합한 포괄적 설계를 적용했습니다.
-<strong>Efficiency-Accuracy Bound:</strong>성능 손실 없이 파라미터 수와 계산량을 최적화하여, 이전 버전들보다
+- <strong>Efficiency-Accuracy Bound:</strong>성능 손실 없이 파라미터 수와 계산량을 최적화하여, 이전 버전들보다
 월등히 적은 자원으로도 높은 정확도를 보여줍니다.
+
+---
+
+## YOLOv11
+
 <span style="color:#0000FF"><strong>YOLOv11</strong></span>은 2024년 9월 <strong>Ultralytics(Glenn Jocher)</strong>에 의해 공개되었습니다. 이전 버전인 YOLOv8,
 v10의 성공을 계승하면서도 아키텍처를 전면적으로 재설계하여, 더 적은 파라미터로 더 높은 정확도와
 속도를 달성하는 데 성공한 모델입니다.
-<strong>1. YOLO11 기술 문서 및 가이드</strong>
-YOLO11 역시 Ultralytics의 정책에 따라 전통적인 arXiv 논문 형태보다는 실용적인 <strong>기술 문서와 블로그 </strong>
-<strong>리포트</strong>를 통해 상세 사양이 공개되었습니다.
-<strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolo11/](https://docs.ultralytics.com/models/yolo11/)</span>
-<strong>Ultralytics 공식 블로그 (YOLO11 출시 공고): </strong>
-<span style="color:#0B57D0">[https://www.ultralytics.com/blog/ultralytics-yolo11-has-arrived-redefining-performance-and-ve](https://www.ultralytics.com/blog/ultralytics-yolo11-has-arrived-redefining-performance-and-ve)</span>
-<span style="color:#0B57D0">rsatility</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)</span>
-YOLOv8과 마찬가지로, ultralytics통합 라이브러리에 포함되어 있습니다. 최신 버전을 설치(pip install
-ultralytics --upgrade)하면 바로 YOLO11 모델을 사용할 수 있습니다.
-<strong>Pre-trained 가중치 (Assets): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/assets/releases](https://github.com/ultralytics/assets/releases)</span>
-YOLO11n, 11s, 11m, 11l, 11x 등 각 모델의 .pt파일을 다운로드할 수 있습니다.
-<strong>3. YOLO11의 핵심 기술적 혁신 </strong>
-<strong>C3k2 Module: </strong>기존의 C2f 모듈을 개선한 <strong>C3k2(Cross-Stage Partial Bottleneck with 3 convolutions </strong>
-<strong>and 2 kernels)</strong>를 도입하여, 연산 효율을 극대화하면서 특징 추출 능력을 세밀하게 조정했습니다.
-<strong>C2PSA (C2f with Partial Self-Attention): </strong>네트워크 상단에 <strong>부분 셀프 어텐션 </strong>레이어를 통합하여, 연산
+
+### 1. YOLO11 기술 문서 및 가이드
+YOLO11 역시 Ultralytics의 정책에 따라 전통적인 arXiv 논문 형태보다는 실용적인 <strong>기술 문서와 블로그 리포트</strong>를 통해 상세 사양이 공개되었습니다.
+- <strong>공식 기술 문서 (Documentation): </strong><span style="color:#0B57D0">[https://docs.ultralytics.com/models/yolo11/](https://docs.ultralytics.com/models/yolo11/)</span>
+- <strong>Ultralytics 공식 블로그 (YOLO11 출시 공고): </strong>
+<span style="color:#0B57D0">[https://www.ultralytics.com/blog/ultralytics-yolo11-has-arrived-redefining-performance-and-versatility](https://www.ultralytics.com/blog/ultralytics-yolo11-has-arrived-redefining-performance-and-versatility)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)</span>
+YOLOv8과 마찬가지로, `ultralytics` 통합 라이브러리에 포함되어 있습니다. 최신 버전을 설치(`pip install
+ultralytics --upgrade`)하면 바로 YOLO11 모델을 사용할 수 있습니다.
+- <strong>Pre-trained 가중치 (Assets): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/assets/releases](https://github.com/ultralytics/assets/releases)</span>
+YOLO11n, 11s, 11m, 11l, 11x 등 각 모델의 `.pt` 파일을 다운로드할 수 있습니다.
+
+### 3. YOLO11의 핵심 기술적 혁신 
+
+- <strong>C3k2 Module: </strong>기존의 C2f 모듈을 개선한 <strong>C3k2(Cross-Stage Partial Bottleneck with 3 convolutions and 2 kernels)</strong>를 도입하여, 연산 효율을 극대화하면서 특징 추출 능력을 세밀하게 조정했습니다.
+- <strong>C2PSA (C2f with Partial Self-Attention): </strong>네트워크 상단에 <strong>부분 셀프 어텐션 </strong>레이어를 통합하여, 연산
 비용을 통제하면서도 전역적인 맥락(Global Context)을 파악하는 능력을 높였습니다.
-<strong>Optimized Architecture: </strong>YOLOv8 대비 파라미터 수를 약 22% 줄였음에도 불구하고 mAP 성능은
+- <strong>Optimized Architecture: </strong>YOLOv8 대비 파라미터 수를 약 22% 줄였음에도 불구하고 mAP 성능은
 향상되어, 임베디드 장치에서의 실시간 성능이 극대화되었습니다.
-<strong>Multi-task Versatility: </strong>탐지(Detection)뿐만 아니라 세그먼테이션, 자세 추정, OBB(Oriented Bounding
+- <strong>Multi-task Versatility: </strong>탐지(Detection)뿐만 아니라 세그먼테이션, 자세 추정, OBB(Oriented Bounding
 Boxes), 분류에 최적화된 설계를 공유합니다.
+
+---
+
+## YOLOv12
+
 가장 최신 모델인 <span style="color:#0000FF"><strong>YOLOv12</strong></span>는 2025년 2월에 발표되었으며, 기존의 CNN 중심 구조에서 벗어나 <strong>어텐션 </strong>
 <strong>중심(Attention-Centric) </strong>설계로 패러다임을 전환한 기념비적인 모델입니다. 특히 "<strong>실시간 성능을 </strong>
 <strong>유지하면서 셀프 어텐션의 이점을 극대화</strong>"했다는 점에서 학계의 큰 관심을 받고 있습니다.
