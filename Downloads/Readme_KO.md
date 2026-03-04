@@ -110,11 +110,11 @@ Redmon이 떠난 후 커뮤니티에 의해 공식적으로 계승된 첫 번째
 ### 2. 소스코드 및 프로젝트 페이지
 
 - <strong>공식 Darknet 저장소 (C언어/CUDA 기반): </strong><span style="color:#0B57D0">[https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)</span>
-Joseph Redmon의 Darknet을 이어받아 AlexeyAB가 유지보수하는 공식 버전입니다. YOLOv4의 모든
+<br>Joseph Redmon의 Darknet을 이어받아 AlexeyAB가 유지보수하는 공식 버전입니다. YOLOv4의 모든
 실험 결과가 이 코드를 기반으로 합니다.
 - <strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">`yolov4.weights` (245MB)</span>
 - <strong>PyTorch 구현체: </strong><span style="color:#0B57D0">[https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)</span>
-Darknet 가중치를 PyTorch로 변환하여 사용할 수 있는 대중적인 저장소입니다.
+<br>Darknet 가중치를 PyTorch로 변환하여 사용할 수 있는 대중적인 저장소입니다.
 
 ### 3. YOLOv4의 핵심 기술 
 
@@ -178,8 +178,8 @@ Large)까지 모든 모델 파일을 받을 수 있습니다.
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
 - <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)</span>
-메이투안 팀에서 직접 관리하는 공식 레포지토리이며, PyTorch 기반으로 구현되어 있습니다.
-<strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv6-N(Nano)부터 YOLOv6-L(Large)까지의 최신 v3.0 가중치를 다운로드할 수 있습니다.
+<br>메이투안 팀에서 직접 관리하는 공식 레포지토리이며, PyTorch 기반으로 구현되어 있습니다.
+- <strong>가중치(Weights) 파일: </strong>저장소의 <span style="color:#0B57D0">Release </span>섹션에서 YOLOv6-N(Nano)부터 YOLOv6-L(Large)까지의 최신 v3.0 가중치를 다운로드할 수 있습니다.
 
 ### 3. YOLOv6의 핵심 기술 
 - <strong>RepVGG Backbone: </strong>추론 시에는 단일 경로(Single-path) 구조로 변환되어 속도를 높이고, 학습 시에는
@@ -337,10 +337,10 @@ YOLO11 역시 Ultralytics의 정책에 따라 전통적인 arXiv 논문 형태�
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
 - <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)</span>
-YOLOv8과 마찬가지로, `ultralytics` 통합 라이브러리에 포함되어 있습니다. 최신 버전을 설치(`pip install
+<br>YOLOv8과 마찬가지로, `ultralytics` 통합 라이브러리에 포함되어 있습니다. 최신 버전을 설치(`pip install
 ultralytics --upgrade`)하면 바로 YOLO11 모델을 사용할 수 있습니다.
 - <strong>Pre-trained 가중치 (Assets): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/assets/releases](https://github.com/ultralytics/assets/releases)</span>
-YOLO11n, 11s, 11m, 11l, 11x 등 각 모델의 `.pt` 파일을 다운로드할 수 있습니다.
+<br>YOLO11n, 11s, 11m, 11l, 11x 등 각 모델의 `.pt` 파일을 다운로드할 수 있습니다.
 
 ### 3. YOLO11의 핵심 기술적 혁신 
 
@@ -356,23 +356,28 @@ Boxes), 분류에 최적화된 설계를 공유합니다.
 
 ## YOLOv12
 
-가장 최신 모델인 <span style="color:#0000FF"><strong>YOLOv12</strong></span>는 2025년 2월에 발표되었으며, 기존의 CNN 중심 구조에서 벗어나 <strong>어텐션 </strong>
-<strong>중심(Attention-Centric) </strong>설계로 패러다임을 전환한 기념비적인 모델입니다. 특히 "<strong>실시간 성능을 </strong>
-<strong>유지하면서 셀프 어텐션의 이점을 극대화</strong>"했다는 점에서 학계의 큰 관심을 받고 있습니다.
-<strong>1. YOLOv12 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv12: Attention-Centric Real-Time Object Detectors
-<strong>저자: </strong>Yunjie Tian, Ge Zheng, 외 (University of Chinese Academy of Sciences 및 여러 연구 기관)
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2502.12524](https://arxiv.org/abs/2502.12524)</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/sanyuan-ai/YOLOv12](https://github.com/sanyuan-ai/YOLOv12)</span>
-<strong>관련 가중치(Weights): </strong>저장소의 Release 섹션에서 YOLOv12-N(Nano)부터 YOLOv12-X(Extra
+가장 최신 모델인 <span style="color:#0000FF"><strong>YOLOv12</strong></span>는 2025년 2월에 발표되었으며, 기존의 CNN 중심 구조에서 벗어나 <strong>어텐션 중심(Attention-Centric) </strong>설계로 패러다임을 전환한 기념비적인 모델입니다. 특히 "<strong>실시간 성능을 유지하면서 셀프 어텐션의 이점을 극대화</strong>"했다는 점에서 학계의 큰 관심을 받고 있습니다.
+
+### 1. YOLOv12 논문 다운로드
+
+- <strong>제목: </strong>YOLOv12: Attention-Centric Real-Time Object Detectors
+- <strong>저자: </strong>Yunjie Tian, Ge Zheng, 외 (University of Chinese Academy of Sciences 및 여러 연구 기관)
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2502.12524](https://arxiv.org/abs/2502.12524)</span>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
+- <strong>공식 GitHub 저장소: </strong><span style="color:#0B57D0">[https://github.com/sanyuan-ai/YOLOv12](https://github.com/sanyuan-ai/YOLOv12)</span>
+- <strong>관련 가중치(Weights): </strong>저장소의 Release 섹션에서 YOLOv12-N(Nano)부터 YOLOv12-X(Extra
 Large)까지의 사전 학습된 모델을 제공합니다.
-<strong>3. YOLOv12의 핵심 혁신 </strong>
-<strong>Area Attention: </strong>표준 어텐션의 O(N2)복잡도 문제를 해결하기 위해, 인접 영역에 집중하는 Area
+
+### 3. YOLOv12의 핵심 혁신
+- <strong>Area Attention: </strong>표준 어텐션의 O(N2)복잡도 문제를 해결하기 위해, 인접 영역에 집중하는 Area
 Attention을 도입하여 계산 효율성을 획득했습니다.
-<strong>R-ELAN (Residual Efficient Layer Aggregation Network): </strong>YOLOv7/v9의 ELAN 구조를 계승하되,
+- <strong>R-ELAN (Residual Efficient Layer Aggregation Network): </strong>YOLOv7/v9의 ELAN 구조를 계승하되,
 어텐션 레이어의 학습 안정성을 위해 잔차(Residual) 연결을 최적화했습니다.
-<strong>FlashAD (Flash Attention Detector): </strong>추론 속도를 극대화하기 위해 FlashAttention 기법을 실시간 객체
+- <strong>FlashAD (Flash Attention Detector): </strong>추론 속도를 극대화하기 위해 FlashAttention 기법을 실시간 객체
 탐지기에 맞게 튜닝하여 적용했습니다.
-<strong>성능 지표: </strong>YOLOv12-N 기준, 이전 최신 모델보다 약 20% 적은 연산량으로도 동등하거나 더 높은
+- <strong>성능 지표: </strong>YOLOv12-N 기준, 이전 최신 모델보다 약 20% 적은 연산량으로도 동등하거나 더 높은
 정확도를 보여줍니다.
+
+---
