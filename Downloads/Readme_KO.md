@@ -26,8 +26,7 @@ Joseph Redmon이 발표한 <span style="color:#0000FF"><strong>YOLOv1</strong></
 현재는 원본 C 코드를 직접 수정하기보다 PyTorch로 구현된 코드를 분석하는 경우가 많습니다. 가장 널리 쓰이는 구현체 중 하나는 다음과 같습니다.
 
 - <strong>PyTorch YOLOv1: </strong>
-<span style="color:#0B57D0">[https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object)</span>
-<span style="color:#0B57D0">_detection/YOLOv1</span>
+<span style="color:#0B57D0">[https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLOv1](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object_detection/YOLOv1)</span>
 
 이 링크들을 통해 YOLOv1의 핵심 알고리즘인 단일 단계 탐지(Single-stage detection) 구조를 상세히 파악하실 수 있습니다.
 
@@ -45,16 +44,15 @@ Joseph Redmon이 발표한 <span style="color:#0000FF"><strong>YOLOv1</strong></
 - <strong>저자: </strong>Joseph Redmon, Ali Farhadi
 - <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1612.08242](https://arxiv.org/abs/1612.08242)</span>
 - <strong>논문 링크 (CVPR Open Access): </strong>
-<span style="color:#0B57D0">[https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR](https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR)</span>
-<span style="color:#0B57D0">_2017_paper.html</span>
+<span style="color:#0B57D0">[https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.html](https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.html)</span>
 
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
 - <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
-YOLOv1과 마찬가지로, Joseph Redmon의 <strong>Darknet </strong>프레임워크 내에 구현되어 있습니다.
+<br>YOLOv1과 마찬가지로, Joseph Redmon의 <strong>Darknet </strong>프레임워크 내에 구현되어 있습니다.
 `cfg/yolo9000.cfg` 또는 `cfg/yolov2.cfg` 파일을 통해 모델 설정을 확인할 수 있습니다.
 - <strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolov2/](https://pjreddie.com/darknet/yolov2/)</span>
-논문에서 사용된 미리 학습된 가중치(Weights) 파일과 테스트 방법을 안내하는 공식 사이트입니다.
+<br>논문에서 사용된 미리 학습된 가중치(Weights) 파일과 테스트 방법을 안내하는 공식 사이트입니다.
 
 ### 3. 주요 개선 사항 
 
@@ -69,38 +67,53 @@ YOLOv1과 마찬가지로, Joseph Redmon의 <strong>Darknet </strong>프레임�
 <span style="color:#0000FF"><strong>YOLOv3</strong></span>는 2018년 Joseph Redmon과 Ali Farhadi가 발표한 논문으로, 기존 YOLO 시리즈의 장점을
 계승하면서도 <strong>Darknet-53</strong>이라는 더 깊은 신경망과 <strong>다중 스케일 예측(Multi-scale prediction)</strong>을
 도입하여 성능을 비약적으로 끌어올린 모델입니다.
-<strong>1. YOLOv3 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv3: An Incremental Improvement
-<strong>저자: </strong>Joseph Redmon, Ali Farhadi
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1804.02767](https://arxiv.org/abs/1804.02767)</span>
-<strong>논문 링크 (공식 웹사이트 PDF): </strong><span style="color:#0B57D0">[https://pjreddie.com/media/files/papers/YOLOv3.pdf](https://pjreddie.com/media/files/papers/YOLOv3.pdf)</span>
-<strong>2. 소스코드 및 가중치(Weights) 링크</strong>
-<strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
-YOLOv3의 공식 구현체입니다. cfg/yolov3.cfg 파일을 통해 구조를 확인할 수 있습니다.
-<strong>공식 프로젝트 페이지: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
-YOLOv3의 Pre-trained 가중치 파일(.weights)을 다운로드할 수 있는 곳입니다.
-<strong>PyTorch 구현체 (추천): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov3](https://github.com/ultralytics/yolov3)</span>
-현재 가장 대중적으로 쓰이는 Ultralytics의 PyTorch 기반 YOLOv3 코드입니다.
-<strong>3. YOLOv3의 핵심 기술적 변화</strong>
-<strong>Bounding Box Prediction: </strong>로지스틱 회귀를 사용하여 각 경계 상자의 객체 점수를 예측합니다.
-<strong>Class Prediction: </strong>Softmax 대신 독립적인 <strong>Logistic Classifiers</strong>를 사용하여 다중 레이블 분류(예:
+
+### 1. YOLOv3 논문 다운로드
+
+- <strong>제목: </strong>YOLOv3: An Incremental Improvement
+- <strong>저자: </strong>Joseph Redmon, Ali Farhadi
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1804.02767](https://arxiv.org/abs/1804.02767)</span>
+- <strong>논문 링크 (공식 웹사이트 PDF): </strong><span style="color:#0B57D0">[https://pjreddie.com/media/files/papers/YOLOv3.pdf](https://pjreddie.com/media/files/papers/YOLOv3.pdf)</span>
+
+### 2. 소스코드 및 가중치(Weights) 링크
+
+- <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
+<br>YOLOv3의 공식 구현체입니다. `cfg/yolov3.cfg` 파일을 통해 구조를 확인할 수 있습니다.
+- <strong>공식 프로젝트 페이지: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
+<br>YOLOv3의 Pre-trained 가중치 파일(.weights)을 다운로드할 수 있는 곳입니다.
+- <strong>PyTorch 구현체 (추천): </strong><span style="color:#0B57D0">[https://github.com/ultralytics/yolov3](https://github.com/ultralytics/yolov3)</span>
+<br>현재 가장 대중적으로 쓰이는 Ultralytics의 PyTorch 기반 YOLOv3 코드입니다.
+
+### 3. YOLOv3의 핵심 기술적 변화
+
+- <strong>Bounding Box Prediction: </strong>로지스틱 회귀를 사용하여 각 경계 상자의 객체 점수를 예측합니다.
+- <strong>Class Prediction: </strong>Softmax 대신 독립적인 <strong>Logistic Classifiers</strong>를 사용하여 다중 레이블 분류(예:
 Woman과 Person 동시 탐지)가 가능해졌습니다.
-<strong>Predictions Across Scales: </strong>FPN(Feature Pyramid Network)과 유사한 방식으로 3가지 다른
+- <strong>Predictions Across Scales: </strong>FPN(Feature Pyramid Network)과 유사한 방식으로 3가지 다른
 스케일(크기)에서 특징을 추출하여 작은 물체 탐지 능력을 대폭 개선했습니다.
+
+---
+
+## YOLOv4
+
 <span style="color:#0000FF"><strong>YOLOv4</strong></span>는 2020년 Alexey Bochkovskiy 등에 의해 발표되었으며, 기존 YOLO 시리즈의 저자인 Joseph
 Redmon이 떠난 후 커뮤니티에 의해 공식적으로 계승된 첫 번째 모델입니다. 이 논문은 수많은 <strong>'Bag of </strong>
 <strong>Freebies'</strong>(학습 비용만 증가시키고 추론 속도는 유지하는 기법)와 <strong>'Bag of Specials'</strong>(추론 속도를 약간
 희생하여 정확도를 대폭 높이는 기법)를 집대성하여 최적의 속도와 정확도를 달성했습니다.
-<strong>1. YOLOv4 논문 다운로드</strong>
-<strong>제목: </strong>YOLOv4: Optimal Speed and Accuracy of Object Detection
-<strong>저자: </strong>Alexey Bochkovskiy, Chien-Yao Wang, Hong-Yuan Mark Liao
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2004.10934](https://arxiv.org/abs/2004.10934)</span>
-<strong>2. 소스코드 및 프로젝트 페이지</strong>
-<strong>공식 Darknet 저장소 (C언어/CUDA 기반): </strong><span style="color:#0B57D0">[https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)</span>
+
+### 1. YOLOv4 논문 다운로드
+
+- <strong>제목: </strong>YOLOv4: Optimal Speed and Accuracy of Object Detection
+- <strong>저자: </strong>Alexey Bochkovskiy, Chien-Yao Wang, Hong-Yuan Mark Liao
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/2004.10934](https://arxiv.org/abs/2004.10934)</span>
+
+### 2. 소스코드 및 프로젝트 페이지
+
+- <strong>공식 Darknet 저장소 (C언어/CUDA 기반): </strong><span style="color:#0B57D0">[https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)</span>
 Joseph Redmon의 Darknet을 이어받아 AlexeyAB가 유지보수하는 공식 버전입니다. YOLOv4의 모든
 실험 결과가 이 코드를 기반으로 합니다.
-<strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">yolov4.weights (245MB)</span>
-<strong>PyTorch 구현체: </strong><span style="color:#0B57D0">[https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)</span>
+- <strong>공식 가중치(Weights) 파일: </strong><span style="color:#0B57D0">yolov4.weights (245MB)</span>
+- <strong>PyTorch 구현체: </strong><span style="color:#0B57D0">[https://github.com/Tianxiaomo/pytorch-YOLOv4](https://github.com/Tianxiaomo/pytorch-YOLOv4)</span>
 Darknet 가중치를 PyTorch로 변환하여 사용할 수 있는 대중적인 저장소입니다.
 <strong>3. YOLOv4의 핵심 기술 </strong>
 <strong>Architecture: </strong>CSPDarknet53(Backbone), SPP(Neck), PANet(Path Aggregation), YOLOv3-Head
