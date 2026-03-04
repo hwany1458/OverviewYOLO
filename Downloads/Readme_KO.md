@@ -50,16 +50,22 @@ YOLOv1부터 v3까지의 가중치(weights) 파일과 설정법을 확인할 수
 
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
-<strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
+- <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
 YOLOv1과 마찬가지로, Joseph Redmon의 <strong>Darknet </strong>프레임워크 내에 구현되어 있습니다.
-cfg/yolo9000.cfg 또는 cfg/yolov2.cfg 파일을 통해 모델 설정을 확인할 수 있습니다.
-<strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolov2/](https://pjreddie.com/darknet/yolov2/)</span>
+`cfg/yolo9000.cfg` 또는 `cfg/yolov2.cfg` 파일을 통해 모델 설정을 확인할 수 있습니다.
+- <strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolov2/](https://pjreddie.com/darknet/yolov2/)</span>
 논문에서 사용된 미리 학습된 가중치(Weights) 파일과 테스트 방법을 안내하는 공식 사이트입니다.
-<strong>3. 주요 개선 사항 </strong>
-<strong>Better: </strong>Batch Normalization 도입, High Resolution Classifier 사용, Anchor Boxes 활용.
-<strong>Faster: </strong>새로운 Backbone망인 <strong>Darknet-19</strong>제안.
-<strong>Stronger: </strong>WordTree 구조를 활용한 계층적 분류를 통해 Detection 데이터(COCO)와 Classification
+
+### 3. 주요 개선 사항 
+
+- <strong>Better: </strong>Batch Normalization 도입, High Resolution Classifier 사용, Anchor Boxes 활용.
+- <strong>Faster: </strong>새로운 Backbone망인 <strong>Darknet-19</strong>제안.
+- <strong>Stronger: </strong>WordTree 구조를 활용한 계층적 분류를 통해 Detection 데이터(COCO)와 Classification
 데이터(ImageNet)를 함께 학습시켜 9,000개 이상의 클래스 인식 가능.
+
+---
+
+## YOLOv3
 <span style="color:#0000FF"><strong>YOLOv3</strong></span>는 2018년 Joseph Redmon과 Ali Farhadi가 발표한 논문으로, 기존 YOLO 시리즈의 장점을
 계승하면서도 <strong>Darknet-53</strong>이라는 더 깊은 신경망과 <strong>다중 스케일 예측(Multi-scale prediction)</strong>을
 도입하여 성능을 비약적으로 끌어올린 모델입니다.
