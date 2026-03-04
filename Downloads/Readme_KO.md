@@ -17,30 +17,39 @@ Joseph Redmon이 발표한 <span style="color:#0000FF"><strong>YOLOv1</strong></
 
 ### 2. 공식 소스코드 및 프로젝트 페이지
 
-<strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
+- <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
 YOLO의 창시자인 Joseph Redmon이 직접 관리하던 원본 프레임워크인 <strong>Darknet</strong>의 소스코드입니다.
-<strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
-YOLOv1부터 v3까지의 가중치(weights) 파일과 설정법을 확인할 수 있는 Joseph Redmon의 공식
-홈페이지입니다.
-<strong>3. 파이토치(PyTorch) 구현체 </strong>
-현재는 원본 C 코드를 직접 수정하기보다 PyTorch로 구현된 코드를 분석하는 경우가 많습니다. 가장
-널리 쓰이는 구현체 중 하나는 다음과 같습니다.
-<strong>PyTorch YOLOv1: </strong>
+- <strong>공식 프로젝트 웹사이트: </strong><span style="color:#0B57D0">[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)</span>
+YOLOv1부터 v3까지의 가중치(weights) 파일과 설정법을 확인할 수 있는 Joseph Redmon의 공식 홈페이지입니다.
+
+### 3. 파이토치(PyTorch) 구현체 
+현재는 원본 C 코드를 직접 수정하기보다 PyTorch로 구현된 코드를 분석하는 경우가 많습니다. 가장 널리 쓰이는 구현체 중 하나는 다음과 같습니다.
+
+- <strong>PyTorch YOLOv1: </strong>
 <span style="color:#0B57D0">[https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object](https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/object)</span>
 <span style="color:#0B57D0">_detection/YOLOv1</span>
-이 링크들을 통해 YOLOv1의 핵심 알고리즘인 단일 단계 탐지(Single-stage detection) 구조를 상세히
-파악하실 수 있습니다.
+
+이 링크들을 통해 YOLOv1의 핵심 알고리즘인 단일 단계 탐지(Single-stage detection) 구조를 상세히 파악하실 수 있습니다.
+
+---
+
+## YOLOv2
+
 <span style="color:#0000FF"><strong>YOLOv2(YOLO9000)</strong></span>는 2017년 CVPR에서 발표된 논문으로, "Better, Faster, Stronger"라는 부제에
 걸맞게 속도와 정확도를 대폭 개선했을 뿐만 아니라, 9,000종 이상의 객체를 탐지할 수 있는 능력을
 보여주었습니다.
-<strong>1. YOLOv2 (YOLO9000) 논문 다운로드</strong>
-<strong>제목: </strong>YOLO9000: Better, Faster, Stronger
-<strong>저자: </strong>Joseph Redmon, Ali Farhadi
-<strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1612.08242](https://arxiv.org/abs/1612.08242)</span>
-<strong>논문 링크 (CVPR Open Access): </strong>
+
+### 1. YOLOv2 (YOLO9000) 논문 다운로드
+
+- <strong>제목: </strong>YOLO9000: Better, Faster, Stronger
+- <strong>저자: </strong>Joseph Redmon, Ali Farhadi
+- <strong>논문 링크 (arXiv): </strong><span style="color:#0B57D0">[https://arxiv.org/abs/1612.08242](https://arxiv.org/abs/1612.08242)</span>
+- <strong>논문 링크 (CVPR Open Access): </strong>
 <span style="color:#0B57D0">[https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR](https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR)</span>
 <span style="color:#0B57D0">_2017_paper.html</span>
-<strong>2. 공식 소스코드 및 프로젝트 페이지</strong>
+
+### 2. 공식 소스코드 및 프로젝트 페이지
+
 <strong>공식 Darknet 저장소 (C언어 기반): </strong><span style="color:#0B57D0">[https://github.com/pjreddie/darknet](https://github.com/pjreddie/darknet)</span>
 YOLOv1과 마찬가지로, Joseph Redmon의 <strong>Darknet </strong>프레임워크 내에 구현되어 있습니다.
 cfg/yolo9000.cfg 또는 cfg/yolov2.cfg 파일을 통해 모델 설정을 확인할 수 있습니다.
