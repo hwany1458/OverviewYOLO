@@ -1,0 +1,11 @@
+artifact,current_claim_type,repository_support,release_status,required_manuscript_action
+Table 4,source-reported quantitative comparison,"Audited subset with source locators and protocol groups",partial,"Replace unaudited rows or add primary-source cell mappings; remove blanket T4 claim from rows not audited"
+Figure 18,accuracy-latency Pareto frontier,"Deterministic source-separated generator and audited input",replacement_ready,"Use source-separated panels; do not claim a single cross-source Pareto frontier or 15-20% gain"
+Figure 19,FLOPs-accuracy efficiency plot,"Deterministic source-separated generator and audited input",replacement_ready,"Use audited rows only; remove unsupported YOLO-NAS region until its exact source ledger is completed"
+Table 5,qualitative robustness synthesis,"Snapshot retained but sources unresolved",blocked,"Keep qualitative only and map each tier to a specific study or remove the table"
+Figure 20,percentage retention radar,"No controlled corruption outputs; qualitative guarded generator only",blocked_numeric,"Replace with explicitly qualitative heatmap or run and release a controlled corruption experiment"
+Table 6,scale and crowd metrics,"No verified custom crowd subset or evaluator output",blocked,"Delete APCrowd and retain only source-reported standard COCO APS/APM/APL rows"
+Table 7,INT8 quantization,"No calibration manifests or raw outputs",blocked,"Delete precise INT8 values or release paired export/calibration/evaluation runs"
+Table 8,specialized dense/occlusion/edge metrics,"Approximate heterogeneous values have no cell-level source locations",blocked,"Convert to qualitative design comparison or rebuild from traceable studies"
+Table 9,cumulative cross-paper ablation,"Configuration is not a native single-source ablation",invalid,"Delete and replace with one row per source-native ablation"
+Table 10,error-type percentages,"No prediction files, denominator, or TIDE output",invalid,"Delete percentages; release a controlled TIDE run before any quantitative error composition"
