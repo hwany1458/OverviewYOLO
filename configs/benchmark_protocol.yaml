@@ -1,0 +1,89 @@
+protocol:
+  name: overview-yolo-controlled-evaluation
+  version: "1.0-draft"
+  status: prospective-not-yet-executed
+  rule: "A configuration file is not evidence that a benchmark was run."
+
+provenance:
+  required_evidence_labels: [SR-P, SR-R, IR, AR, SYN]
+  required_comparability_labels: [C, P, NC]
+  require_upstream_commit_for_ar: true
+  require_weight_sha256_for_ar: true
+  require_raw_output_for_ar: true
+  require_run_manifest_for_ar: true
+
+datasets:
+  coco_accuracy:
+    name: MS COCO 2017
+    split: val2017
+    task: bbox
+    annotation_checksum: REQUIRED_BEFORE_RUN
+    evaluator: official-cocoapi
+    metrics: [AP, AP50, AP75, APS, APM, APL, AR1, AR10, AR100]
+  historical:
+    preserve_native_dataset_and_split: true
+    allow_paired_cross_dataset_delta: false
+
+model:
+  task: detect
+  input_size: [640, 640]
+  retain_native_input_track: true
+  max_detections: 100
+  head_mode_required_for: [YOLOv10, YOLO26]
+  distinguish_yolov5_from_yolov5u: true
+
+accuracy:
+  retain_prediction_json: true
+  retain_console_or_json_output: true
+  use_official_evaluator: true
+  report_per_class: optional
+
+latency:
+  batch_sizes: [1]
+  warmup_iterations: 100
+  measured_iterations: 1000
+  synchronization: device-specific-explicit
+  statistics: [mean, median, std, p90, p95]
+  components: [preprocess, inference, decode_postprocess, end_to_end]
+  report_data_transfer_scope: true
+  reciprocal_fps_label: derived_fps
+
+training:
+  mode: not_required_for_checkpoint-validation
+  minimum_seeds_for_new_training: 3
+  seeds: [0, 1, 2]
+  separate_native_and_common_recipes: true
+
+quantization:
+  require_calibration_manifest: true
+  require_fp_baseline_same_protocol: true
+  require_post_export_accuracy: true
+  report_excluded_layers: true
+
+robustness:
+  status: disabled-until-versioned-corruption-pipeline-is-released
+  retain_clean_baseline: true
+  deterministic_seeds: true
+  report_absolute_and_retention_metrics: true
+
+error_analysis:
+  tool: TIDE
+  status: disabled-until-prediction-files-exist
+  require_prediction_files: true
+  require_denominator_for_percentages: true
+  prohibit_synthetic_percentages: true
+
+comparison:
+  delta_allowed_only_when: C
+  required_matching_fields:
+    - task
+    - dataset_release
+    - split
+    - metric_definition
+    - input_size
+    - precision
+    - runtime
+    - hardware
+    - batch_size
+    - timing_scope
+    - head_mode_or_postprocessing

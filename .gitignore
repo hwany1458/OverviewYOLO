@@ -1,0 +1,29 @@
+# Upstream repositories and model artifacts
+upstream/
+weights/
+datasets/
+*.pt
+*.pth
+*.weights
+*.engine
+*.onnx
+*.tflite
+*.mlpackage
+
+# Experiment outputs
+runs/
+outputs/
+predictions/
+*.log
+
+# Python and editors
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
